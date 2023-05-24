@@ -37,33 +37,3 @@ $mensaje = [
 echo json_encode($mensaje, JSON_PRETTY_PRINT);
 
 
-// 2. Dado un número indicar si es par o impar y si es mayor de 10.
-
-function mayor($may)
-{
-    return($may >= 10) ? "El numero ingresado es mayor a 10" : "El numero ingresado es menor a 10";
-    
-}
-function num(float $num1)
-{
-    $paridad = ($num1 / 2 == 0) ? "El número es par" : "El número es impar";
-    $rta =mayor($paridad);
-    return [$paridad, $rta];
-}
-
-try {
-    [$paridad, $rta] = match ($METHOD) {
-        "POST" => num(...$_DATA)
-    };
-} catch (\Throwable $th) {
-    $paridad = "Error";
-    $rta = "Error";
-}
-
-$mensaje2 = [
-    "mensaje" => $res,
-    "notas" => $_DATA,
-    "promedio" => $promedio
-];
-
-echo json_encode($mensaje2, JSON_PRETTY_PRINT);

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- /* 6. Construir el algoritmo en Javascript para un programa
+para cualquier cantidad de estudiantes que lea el nombre,
+el sexo y la nota definitiva y halle al estudiante con la mayor
+nota y al estudiante con la menor nota y cuantos eran
+hombres y cuantos mujeres.
+ */ -->
+    <form id="myFormulario">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre[]" required />
+
+      <label for="sexo">Sexo:</label>
+      <select name="sexo[]">
+        <option value="M">Masculino</option>
+        <option value="F">Femenino</option>
+      </select>
+
+      <label for="nota">Nota:</label>
+      <input type="number" name="nota[]"  required />
+      <input type="submit" value="Enviar" />
+    </form>
+    <pre></pre>
+  </body>
+</html>
